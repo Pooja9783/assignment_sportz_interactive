@@ -23,7 +23,7 @@ const Match = () => {
               return (
                 <div className="col-sm-6 col-md-6 col-lg-3" key={i}>
                   <div className="card p-3  mb-5" style={{ width: "18rem" }}>
-                    <img src={`/player-images/${value.Id}.jpg`} alt="img" />
+                    <img src={`./player-images/${value.Id}.jpg`} alt="img" />
                     <div className="card-body">
                       <h2 className="text-dark"> {value.PFName}</h2>
                       <p className="text-dark fw-normal ">
