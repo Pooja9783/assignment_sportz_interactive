@@ -27,7 +27,7 @@ const Match = () => {
                     <div className="card-body">
                       <h2 className="text-dark"> {value.PFName}</h2>
                       <p className="text-dark fw-normal ">
-                        <span className="fw-bold">Skill :</span>{" "}
+                        <span className="fw-bold">Skill :</span>
                         {value.SkillDesc}
                       </p>
                       <p className="text-dark fw-normal ">
