@@ -1,9 +1,10 @@
 import "./App.css";
-import Match from "./components/Match";
+import Search from "../src/components/Search";
+
 function App() {
   return (
     <div className="App">
-      <Match />
+      <Search />
     </div>
   );
 }

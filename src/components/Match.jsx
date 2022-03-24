@@ -22,22 +22,32 @@ const Match = () => {
             {val.map((value, i) => {
               return (
                 <div className="col-sm-6 col-md-6 col-lg-3" key={i}>
-                  <div className="card p-3  mb-5" style={{ width: "18rem" }}>
+                  <div
+                    className="card p-3  mb-5"
+                    style={{ width: "18rem", height: "33rem" }}
+                  >
                     <img src={`./player-images/${value.Id}.jpg`} alt="img" />
                     <div className="card-body">
-                      <h2 className="text-dark"> {value.PFName}</h2>
+                      <h2 className="text-dark fs-5"> {value.PFName}</h2>
                       <p className="text-dark fw-normal ">
-                        <span className="fw-bold">Skill :</span>
+                        <span className="fw-bold">Skill : </span>
                         {value.SkillDesc}
                       </p>
                       <p className="text-dark fw-normal ">
-                        <span className="fw-bold">value:</span> ${value.Value}
+                        <span className="fw-bold">value : </span> $
+                        {[].slice.call(value.Value).sort(function (a, b) {
+                          return b - a;
+                        })}
                       </p>
                       <p className="text-dark fw-normal ">
-                        <span className="fw-bold">Node:</span>
-                        {value.UpComingMatchesList.map((e) => {
-                          <p className="text-dark fw-normal ">{e.CCode}</p>;
-                        })}
+                        <span className="fw-bold">Upcoming Match : </span>
+                        {value.UpComingMatchesList[0].CCode}
+                        <span className="fw-light"> vs </span>
+                        {value.UpComingMatchesList[0].VsCCode}
+                      </p>
+                      <p className="text-dark fw-normal ">
+                        <span className="fw-bold">Date : </span>
+                        {value.UpComingMatchesList[0].MDate}
                       </p>
                     </div>
                   </div>
