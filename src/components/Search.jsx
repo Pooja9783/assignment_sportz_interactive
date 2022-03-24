@@ -9,14 +9,16 @@ const Search = () => {
   const [data, setData] = useState([]);
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-
   useEffect(() => {
     setLoading(true);
-    axios.get("https://api.npoint.io/20c1afef1661881ddc9c").then((res) => {
-      console.log(res.data.playerList);
-      setData(res.data.playerList);
-      setLoading(false);
-    });
+    axios
+      .get("https://api.npoint.io/20c1afef1661881ddc9c")
+      .then((res) => {
+        console.log(res.data.teamsList);
+        setData(res.data.playerList);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
   }, []);
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
@@ -27,6 +29,7 @@ const Search = () => {
           .toLowerCase()
           .includes(searchInput.toLowerCase());
       });
+
       setFilteredResults(filteredData);
     } else {
       setFilteredResults(data);
@@ -42,7 +45,7 @@ const Search = () => {
               <input
                 className="form-control me-2"
                 type="search"
-                placeholder="Search"
+                placeholder="Search for Players...."
                 aria-label="Search"
                 onChange={(e) => searchItems(e.target.value)}
               />

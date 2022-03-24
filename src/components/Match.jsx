@@ -9,7 +9,7 @@ const Match = () => {
     axios
       .get("https://api.npoint.io/20c1afef1661881ddc9c")
       .then((res) => {
-        console.log(res.data.playerList);
+        console.log(res.data);
         setVal(res.data.playerList);
       })
       .catch((err) => console.log(err));
