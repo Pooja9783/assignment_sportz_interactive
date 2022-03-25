@@ -35,9 +35,7 @@ const Match = () => {
                       </p>
                       <p className="text-dark fw-normal ">
                         <span className="fw-bold">Value : </span> $
-                        {[].slice.call(value.Value).sort(function (a, b) {
-                          return a-b;
-                        })}
+                        {value.Value}
                       </p>
                       <p className="text-dark fw-normal ">
                         <span className="fw-bold">Upcoming Match : </span>
