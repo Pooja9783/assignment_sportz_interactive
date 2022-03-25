@@ -36,7 +36,7 @@ const Match = () => {
                       <p className="text-dark fw-normal ">
                         <span className="fw-bold">value : </span> $
                         {[].slice.call(value.Value).sort(function (a, b) {
-                          return b - a;
+                          return a-b;
                         })}
                       </p>
                       <p className="text-dark fw-normal ">
