@@ -34,7 +34,7 @@ const Match = () => {
                         {value.SkillDesc}
                       </p>
                       <p className="text-dark fw-normal ">
-                        <span className="fw-bold">value : </span> $
+                        <span className="fw-bold">Value : </span> $
                         {[].slice.call(value.Value).sort(function (a, b) {
                           return a-b;
                         })}
